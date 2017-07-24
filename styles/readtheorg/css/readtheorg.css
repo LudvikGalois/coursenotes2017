@@ -815,14 +815,14 @@ ul.nav li.active ul li ul li {
 }
 
 ul.nav li.active ul li a {
-    background-color: #E3E3E3;
+    background-color: #232323;
     color: #8099B0;
     border-right:solid 1px #c9c9c9 !important;
 }
 
 ul.nav li.active ul li.active a {
-    background-color: #C9C9C9;
-    color: black !important;
+    background-color: #494949;
+    color: #34e114 !important;
     font-weight: bold !important;
 }
 
@@ -858,7 +858,7 @@ ul.nav li.active > a {
 }
 
 ul.nav li.active a {
-    color: gray !important;
+    color: #34e114 !important;
     font-weight:bold;
     background-color: white;
     border-right:solid 0px white !important;

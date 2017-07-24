@@ -8,3 +8,5 @@
    - [ ] Watch the lecture
    - [ ] Write notes
    - [ ] Find which topics will require work
+
+** Another heading
