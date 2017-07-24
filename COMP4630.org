@@ -4,4 +4,7 @@
 
 * Lecture 1
 
-** TODO actually watch the lecture
+** TODO Watch the lecture [0%]
+   - [ ] Watch the lecture
+   - [ ] Write notes
+   - [ ] Find which topics will require work
