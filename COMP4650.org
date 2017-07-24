@@ -96,8 +96,8 @@ Mon 2pm-3pm and Tue 12pm-1pm
 ** Labs
 
 There are 10 labs starting week 2
-*** TODO sign up
-These open tomorrow
+*** TODO sign up [%]
+  - [ ] Enroll in a lab tomorrow
 
 ** Course material and communications
 Everything on Wattle
