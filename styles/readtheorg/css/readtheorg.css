@@ -37,7 +37,8 @@ h6{
 }
 
 h4,h5,h6{
-    color:#2980B9;
+    /*color:#2980B9;*/
+    color:#729fcf;
     font-weight:300;
 }
 
@@ -50,8 +51,10 @@ html{
 }
 
 body{
-    background:#edf0f2;
-    color:#404040;
+    /* background:#edf0f2; */
+    background:#222222;
+    /* color:#04040; */
+    color:#34e114;
     font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     font-weight:normal;
     margin:0;
@@ -60,7 +63,8 @@ body{
 }
 
 #content{
-    background:#fcfcfc;
+    /* background:#fcfcfc; */
+    background:#000000;
     height:100%;
     margin-left:300px;
     /* margin:auto; */
@@ -1032,7 +1036,8 @@ h2.footnotes{
 }
 
 .todo{
-    background-color: #f29f97;
+    /* background-color: #f29f97; */
+    background-color:#222222;
     padding: 0px 4px;
     color: #fff;
 }
