@@ -1,0 +1,113 @@
+#+AUTHOR: Robert 'Probie' Offner
+#+CREATOR: 
+
+* Lecture 1
+
+** History of writing
+First example- Jihau 5000BCE
+
+A huge spike in the number of books Europe after the invention of the printing press
+
+Google estimates that there about 130 million books in 2010
+
+About 14.3 trillion web pages, 48 billion of which are indexed by Google
+
+143199 tweets a second in 2013 in Japan
+
+** How to automatically process such huge amounts of data
+Take this class
+
+** Topic 1: Information retrieval
+
+*** Boolean retrieval
+Are words present?
+
+Not good enough
+
+** Topic 2: Machine learning
+Naive Bayes
+
+Textual classification using Vector Space Model
+
+** Topic 3: Social media analysis
+
+Computation social media and networks
+
+Computing network metrics and community detection
+
+Link prediction and visualisation
+
+Sentiment analysis
+
+** Topic 4: NLP
+
+Preprocessing
+
+Language modelling
+
+Vector semantics
+
+Syntax and parsing
+
+Compositional semantics and NLP in practice
+
+** Topic 5: Information extraction
+
+Introduction to IE
+
+HMM (Hidden Markov models) and CRF
+
+Automatic summarisation
+
+IE in practice
+
+** What other applications
+
+Plenty - Question answering, information synthesis, trend analysis,
+machine translation, sentiment analysis...
+
+Answer a business intelligence question (e.g "Why aren't people buying my product")
+
+** Course logistics
+
+Read the course outline
+
+4 lecturers, questions about admin go to Marian-Andrei Rizolu 
+or Lexing Xie (course convener)
+
+Ask questions on Wattle unless it's a private matter
+
+** Textbook
+
+First and third available online
+
+Introduction to information retrieval
+
+Speech and Language Processing: An introduction to natural language
+processing, computational linguistics and speech recognition
+(Find the draft of the third edition online)
+
+Networks, Crowds and Markets: Reasoning about a highly connected world
+
+** Lectures
+Mon 2pm-3pm and Tue 12pm-1pm
+
+** Labs
+
+There are 10 labs starting week 2
+*** TODO sign up
+These open tomorrow
+
+** Course material and communications
+Everything on Wattle
+
+** Assessment
+5 Assignments (one per topic)
+
+In python (yay?) Nope, it's 2
+
+Final exam worth 50%
+
+Two weeks to finish assignment (except NLP)
+
+Written questions are submitted to Wattle
