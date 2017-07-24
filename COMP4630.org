@@ -1,0 +1,7 @@
+#+AUTHOR: Robert 'Probie' Offner
+#+CREATOR: 
+#+SETUPFILE: /home/probie/Procrastination/org-html-themes/setup/theme-readtheorg-local.setup
+
+* Lecture 1
+
+There's not much to put here
