@@ -55,6 +55,7 @@ body{
     background:#222222;
     /* color:#04040; */
     color:#34e114;
+    mathcolor:"green";
     font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     font-weight:normal;
     margin:0;
@@ -161,6 +162,8 @@ dl p,dl table,dl ul,dl ol{
 dl dd{
     margin:0 0 12px 24px;
 }
+
+.math, .maction, .menclose, .merror, .mfenced, .mglyph, .mo, .mover, .mi, .mphantom, .mroot, .mrow, .ms, .mscarries, .mscarry, .msgroup, .msline, .mstack, .mspace, .msqrt, .msrow, .mstyle, .msub, .msup, .msubsup, .mtable, .mn, .mtd, .mtext, .mtr, .munder, .munderover, .mfrac { color: #34e114 ! important;}
 
 @media print{
     .codeblock,pre.src{

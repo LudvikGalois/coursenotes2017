@@ -9,3 +9,5 @@
    - [ ] Write notes
    - [ ] Find which topics will require work
 
+
+$\Gamma \vdash \frac{3}{\tau}$
