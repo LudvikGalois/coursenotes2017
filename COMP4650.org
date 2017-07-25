@@ -2,10 +2,10 @@
 #+CREATOR: 
 #+SETUPFILE: /home/probie/Procrastination/org-html-themes/setup/theme-readtheorg-local.setup
 
-* Lecture 1
+* Lecture 1 (Introduction)
 
 ** History of writing
-First example- Jiahu 5000BCE
+First example- Jiahu 6000BCE
 
 A huge spike in the number of books Europe after the invention of the printing press
 
@@ -112,3 +112,172 @@ Final exam worth 50%
 Two weeks to finish assignment (except NLP)
 
 Written questions are submitted to Wattle
+
+* Lecture 2 (Information Retrieval)
+
+** Structure
+
+3 sections to this part of the course
+
+Assignment will be announced next week ~ElasticSearch~
+
+Highly related to next week's lab.
+
+Find the textbook at http://nlp.stanford.edu/IR-book/
+
+** What is Information Retrieval?
+
+Comes from library system (since that required an efficient way to
+quickly find a book)
+
+Index card system replaced by a computerised version of it.
+
+Information Retrieval (IR) is a finding material (usually documents) of an
+unstructured nature (usually text) that satisfies an information need from
+within large collections (usually stored on computers)
+
+Not needed for structured data sets (e.g relational databases)
+
+Not just web search
+  - E-mail search
+  - Local file search
+  - Corporate knowledge bases
+  - Image and video search
+
+What we have: A set of documents (treat it as static for now)
+
+What we want to do: Retrieve information from it
+
+Classic Search Model
+
+*** TODO make this in dot
+1. User task (Listen to music using bluetooth headphone)
+2. Info need (Info about how to connect)
+3. Query (Work out what to search)
+4. Search engine (Search for it)
+5. Result (We're done if it's what we want)
+6. Query refinement (from 5 and to 3)
+Collection (into 4)
+
+Every good IR system needs to achieve
+  - Effectiveness (Google has more than 130 trillion pages)
+  - Accuracy (Top 10 pages from 130 trillion pages?)
+
+** Search Shakespeare
+
+We want to find all the plays which contains Brutus and Caesar but not
+Calpurnia
+
+We could grep through, but
+  - it's slow 
+  - not Calpurnia is non-trivial
+  - hard to extend
+  - we can't rank the answer
+
+** Term Document Matrix
+
+|           | Antony and Cleopatra | Julius Caesar | The Tempest | Hamlet | Othello | Macbeth |
+| Antony    |                    1 |             1 |           0 |      0 |       0 |       1 |
+| Brutus    |                    1 |             1 |           0 |      1 |       0 |       0 |
+| Caesar    |                    1 |             1 |           0 |      1 |       1 |       1 |
+| Calpurnia |                    0 |             1 |           0 |      0 |       0 |       0 |
+| mercy     |                    1 |             0 |           1 |      1 |       1 |       1 |
+| worser    |                    1 |             0 |           1 |      1 |       1 |       0 |
+
+   
+Each column is a document and each row is term
+
+Efficiency?
+
+Consider 1 million document at about a thousand words long. That'd be
+about 6GB of data and about half a million distinct terms. The table would
+be much too big
+
+** Inverted index structure
+
+Fundamental in modern information retrieval
+
+It consists of two parts, dictionary and postings.
+
+The dictionary maps from term to (dynamically sized) posting array
+
+This is really just a sparse matrix of the above, except we use a dictionary
+for the rows. The postings need to be ordered for efficient operations on them
+
+*** Construction
+
+**** Token sequencing
+Scan documents for indexable terms
+
+Keep list of (~token~, ~docID~) from data set
+
+**** Preprocess
+Sort on ~token~, and then ~docID~
+
+**** Dictionary and Postings
+
+Trivial to build now that our data is in order
+
+*** Boolean retrieval with inverted index
+
+**** Intersection
+until either is empty, compare the first elements of each posting
+if they're equal, add it to the result, otherwise move to the next
+element of the one which was smaller
+
+**** Union
+until they're both empty, compare the first elements, if they're
+equal add that ~docID~ and progress both postings, otherwise add
+the smaller ~docID~ and progress that posting
+
+*** Summary
+Can answer any query which is a Boolean expression.
+
+Precise: each document matches, or not
+
+Extended Boolean allows more complex queries
+
+Tried and tested - it's been around for 30 years
+
+** A step back
+
+So far we assume that we can easily scan terms from a document,
+but really we need to do tokenisation, normalisation, stopwords, stemming
+and lemmatisation
+
+*** Tokenisation
+
+Task of chopping documents into tokens.
+
+Chopping by white space and throwing punctuation are not enough
+
+It won't work well for numbers or hyphenation, plus you want to rejoin
+some compound words
+
+Make sure to tokenise both the query and documents by the same method
+
+*** Stopword removal
+Stopword removal (remove highly occurring words that convey little to no information)
+
+Reduce size of posting list
+
+They're not useful
+
+*** Normalisation 
+
+Keep equivalence classes (e.g U.S.A = USA = United States)
+
+Synonym list, e.g car = automobile
+
+Capitalisation and case folding
+
+Proper nouns are important
+
+*** Stemming
+
+Replace words with stems
+
+*** Lemmatisation
+
+Lemmatisation turns words into lemmas, which are dictionary entries
+(e.g better has good as a lemma)

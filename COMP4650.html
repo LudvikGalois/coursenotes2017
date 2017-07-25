@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>COMP4650</title>
-<!-- 2017-07-24 Mon 21:14 -->
+<!-- 2017-07-25 Tue 13:33 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Robert 'Probie' Offner" />
@@ -148,7 +148,7 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. Lecture 1</a>
+<li><a href="#sec-1">1. Lecture 1 (Introduction)</a>
 <ul>
 <li><a href="#sec-1-1">1.1. History of writing</a></li>
 <li><a href="#sec-1-2">1.2. How to automatically process such huge amounts of data</a></li>
@@ -167,11 +167,39 @@ for the JavaScript code in this tag.
 <li><a href="#sec-1-11">1.11. Lectures</a></li>
 <li><a href="#sec-1-12">1.12. Labs</a>
 <ul>
-<li><a href="#sec-1-12-1">1.12.1. <span class="todo TODO">TODO</span> sign up <code>[0/1]</code></a></li>
+<li><a href="#sec-1-12-1">1.12.1. <span class="todo TODO">TODO</span> sign up <code>[0%]</code></a></li>
 </ul>
 </li>
 <li><a href="#sec-1-13">1.13. Course material and communications</a></li>
 <li><a href="#sec-1-14">1.14. Assessment</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Lecture 2 (Information Retrieval)</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Structure</a></li>
+<li><a href="#sec-2-2">2.2. What is Information Retrieval?</a>
+<ul>
+<li><a href="#sec-2-2-1">2.2.1. <span class="todo TODO">TODO</span> make this in dot</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-3">2.3. Search Shakespeare</a></li>
+<li><a href="#sec-2-4">2.4. Term Document Matrix</a></li>
+<li><a href="#sec-2-5">2.5. Inverted index structure</a>
+<ul>
+<li><a href="#sec-2-5-1">2.5.1. Construction</a></li>
+<li><a href="#sec-2-5-2">2.5.2. Boolean retrieval with inverted index</a></li>
+<li><a href="#sec-2-5-3">2.5.3. Summary</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-6">2.6. A step back</a>
+<ul>
+<li><a href="#sec-2-6-1">2.6.1. Tokenisation</a></li>
+<li><a href="#sec-2-6-2">2.6.2. Stopword removal</a></li>
+<li><a href="#sec-2-6-3">2.6.3. Normalisation</a></li>
+<li><a href="#sec-2-6-4">2.6.4. Stemming</a></li>
+<li><a href="#sec-2-6-5">2.6.5. Lemmatisation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -179,13 +207,13 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> Lecture 1</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> Lecture 1 (Introduction)</h2>
 <div class="outline-text-2" id="text-1">
 </div><div id="outline-container-sec-1-1" class="outline-3">
 <h3 id="sec-1-1"><span class="section-number-3">1.1</span> History of writing</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
-First example- Jiahu 5000BCE
+First example- Jiahu 6000BCE
 </p>
 
 <p>
@@ -384,7 +412,7 @@ There are 10 labs starting week 2
 </p>
 </div>
 <div id="outline-container-sec-1-12-1" class="outline-4">
-<h4 id="sec-1-12-1"><span class="section-number-4">1.12.1</span> <span class="todo TODO">TODO</span> sign up <code>[0/1]</code></h4>
+<h4 id="sec-1-12-1"><span class="section-number-4">1.12.1</span> <span class="todo TODO">TODO</span> sign up <code>[0%]</code></h4>
 <div class="outline-text-4" id="text-1-12-1">
 <ul class="org-ul">
 <li><code>[&#xa0;]</code> Enroll in a lab tomorrow
@@ -428,10 +456,437 @@ Written questions are submitted to Wattle
 </div>
 </div>
 </div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Lecture 2 (Information Retrieval)</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Structure</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+3 sections to this part of the course
+</p>
+
+<p>
+Assignment will be announced next week <code>ElasticSearch</code>
+</p>
+
+<p>
+Highly related to next week's lab.
+</p>
+
+<p>
+Find the textbook at <a href="http://nlp.stanford.edu/IR-book/">http://nlp.stanford.edu/IR-book/</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> What is Information Retrieval?</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Comes from library system (since that required an efficient way to
+quickly find a book)
+</p>
+
+<p>
+Index card system replaced by a computerised version of it.
+</p>
+
+<p>
+Information Retrieval (IR) is a finding material (usually documents) of an
+unstructured nature (usually text) that satisfies an information need from
+within large collections (usually stored on computers)
+</p>
+
+<p>
+Not needed for structured data sets (e.g relational databases)
+</p>
+
+<p>
+Not just web search
+</p>
+<ul class="org-ul">
+<li>E-mail search
+</li>
+<li>Local file search
+</li>
+<li>Corporate knowledge bases
+</li>
+<li>Image and video search
+</li>
+</ul>
+
+<p>
+What we have: A set of documents (treat it as static for now)
+</p>
+
+<p>
+What we want to do: Retrieve information from it
+</p>
+
+<p>
+Classic Search Model
+</p>
+</div>
+
+<div id="outline-container-sec-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1"><span class="section-number-4">2.2.1</span> <span class="todo TODO">TODO</span> make this in dot</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ol class="org-ol">
+<li>User task (Listen to music using bluetooth headphone)
+</li>
+<li>Info need (Info about how to connect)
+</li>
+<li>Query (Work out what to search)
+</li>
+<li>Search engine (Search for it)
+</li>
+<li>Result (We're done if it's what we want)
+</li>
+<li>Query refinement (from 5 and to 3)
+</li>
+</ol>
+<p>
+Collection (into 4)
+</p>
+
+<p>
+Every good IR system needs to achieve
+</p>
+<ul class="org-ul">
+<li>Effectiveness (Google has more than 130 trillion pages)
+</li>
+<li>Accuracy (Top 10 pages from 130 trillion pages?)
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Search Shakespeare</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+We want to find all the plays which contains Brutus and Caesar but not
+Calpurnia
+</p>
+
+<p>
+We could grep through, but
+</p>
+<ul class="org-ul">
+<li>it's slow 
+</li>
+<li>not Calpurnia is non-trivial
+</li>
+<li>hard to extend
+</li>
+<li>we can't rank the answer
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> Term Document Matrix</h3>
+<div class="outline-text-3" id="text-2-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">&#xa0;</td>
+<td class="right">Antony and Cleopatra</td>
+<td class="right">Julius Caesar</td>
+<td class="right">The Tempest</td>
+<td class="right">Hamlet</td>
+<td class="right">Othello</td>
+<td class="right">Macbeth</td>
+</tr>
+
+<tr>
+<td class="left">Antony</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">1</td>
+</tr>
+
+<tr>
+<td class="left">Brutus</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">0</td>
+<td class="right">1</td>
+<td class="right">0</td>
+<td class="right">0</td>
+</tr>
+
+<tr>
+<td class="left">Caesar</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">0</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+</tr>
+
+<tr>
+<td class="left">Calpurnia</td>
+<td class="right">0</td>
+<td class="right">1</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+</tr>
+
+<tr>
+<td class="left">mercy</td>
+<td class="right">1</td>
+<td class="right">0</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+</tr>
+
+<tr>
+<td class="left">worser</td>
+<td class="right">1</td>
+<td class="right">0</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">0</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>
+Each column is a document and each row is term
+</p>
+
+<p>
+Efficiency?
+</p>
+
+<p>
+Consider 1 million document at about a thousand words long. That'd be
+about 6GB of data and about half a million distinct terms. The table would
+be much too big
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> Inverted index structure</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Fundamental in modern information retrieval
+</p>
+
+<p>
+It consists of two parts, dictionary and postings.
+</p>
+
+<p>
+The dictionary maps from term to (dynamically sized) posting array
+</p>
+
+<p>
+This is really just a sparse matrix of the above, except we use a dictionary
+for the rows. The postings need to be ordered for efficient operations on them
+</p>
+</div>
+
+<div id="outline-container-sec-2-5-1" class="outline-4">
+<h4 id="sec-2-5-1"><span class="section-number-4">2.5.1</span> Construction</h4>
+<div class="outline-text-4" id="text-2-5-1">
+</div><ol class="org-ol"><li><a id="sec-2-5-1-1" name="sec-2-5-1-1"></a>Token sequencing<br  /><div class="outline-text-5" id="text-2-5-1-1">
+<p>
+Scan documents for indexable terms
+</p>
+
+<p>
+Keep list of (<code>token</code>, <code>docID</code>) from data set
+</p>
+</div>
+</li>
+
+<li><a id="sec-2-5-1-2" name="sec-2-5-1-2"></a>Preprocess<br  /><div class="outline-text-5" id="text-2-5-1-2">
+<p>
+Sort on <code>token</code>, and then <code>docID</code>
+</p>
+</div>
+</li>
+
+<li><a id="sec-2-5-1-3" name="sec-2-5-1-3"></a>Dictionary and Postings<br  /><div class="outline-text-5" id="text-2-5-1-3">
+<p>
+Trivial to build now that our data is in order
+</p>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-sec-2-5-2" class="outline-4">
+<h4 id="sec-2-5-2"><span class="section-number-4">2.5.2</span> Boolean retrieval with inverted index</h4>
+<div class="outline-text-4" id="text-2-5-2">
+</div><ol class="org-ol"><li><a id="sec-2-5-2-1" name="sec-2-5-2-1"></a>Intersection<br  /><div class="outline-text-5" id="text-2-5-2-1">
+<p>
+until either is empty, compare the first elements of each posting
+if they're equal, add it to the result, otherwise move to the next
+element of the one which was smaller
+</p>
+</div>
+</li>
+
+<li><a id="sec-2-5-2-2" name="sec-2-5-2-2"></a>Union<br  /><div class="outline-text-5" id="text-2-5-2-2">
+<p>
+until they're both empty, compare the first elements, if they're
+equal add that <code>docID</code> and progress both postings, otherwise add
+the smaller <code>docID</code> and progress that posting
+</p>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-sec-2-5-3" class="outline-4">
+<h4 id="sec-2-5-3"><span class="section-number-4">2.5.3</span> Summary</h4>
+<div class="outline-text-4" id="text-2-5-3">
+<p>
+Can answer any query which is a Boolean expression.
+</p>
+
+<p>
+Precise: each document matches, or not
+</p>
+
+<p>
+Extended Boolean allows more complex queries
+</p>
+
+<p>
+Tried and tested - it's been around for 30 years
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-6" class="outline-3">
+<h3 id="sec-2-6"><span class="section-number-3">2.6</span> A step back</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+So far we assume that we can easily scan terms from a document,
+but really we need to do tokenisation, normalisation, stopwords, stemming
+and lemmatisation
+</p>
+</div>
+
+<div id="outline-container-sec-2-6-1" class="outline-4">
+<h4 id="sec-2-6-1"><span class="section-number-4">2.6.1</span> Tokenisation</h4>
+<div class="outline-text-4" id="text-2-6-1">
+<p>
+Task of chopping documents into tokens.
+</p>
+
+<p>
+Chopping by white space and throwing punctuation are not enough
+</p>
+
+<p>
+It won't work well for numbers or hyphenation, plus you want to rejoin
+some compound words
+</p>
+
+<p>
+Make sure to tokenise both the query and documents by the same method
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-6-2" class="outline-4">
+<h4 id="sec-2-6-2"><span class="section-number-4">2.6.2</span> Stopword removal</h4>
+<div class="outline-text-4" id="text-2-6-2">
+<p>
+Stopword removal (remove highly occurring words that convey little to no information)
+</p>
+
+<p>
+Reduce size of posting list
+</p>
+
+<p>
+They're not useful
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-6-3" class="outline-4">
+<h4 id="sec-2-6-3"><span class="section-number-4">2.6.3</span> Normalisation</h4>
+<div class="outline-text-4" id="text-2-6-3">
+<p>
+Keep equivalence classes (e.g U.S.A = USA = United States)
+</p>
+
+<p>
+Synonym list, e.g car = automobile
+</p>
+
+<p>
+Capitalisation and case folding
+</p>
+
+<p>
+Proper nouns are important
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-6-4" class="outline-4">
+<h4 id="sec-2-6-4"><span class="section-number-4">2.6.4</span> Stemming</h4>
+<div class="outline-text-4" id="text-2-6-4">
+<p>
+Replace words with stems
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-6-5" class="outline-4">
+<h4 id="sec-2-6-5"><span class="section-number-4">2.6.5</span> Lemmatisation</h4>
+<div class="outline-text-4" id="text-2-6-5">
+<p>
+Lemmatisation turns words into lemmas, which are dictionary entries
+(e.g better has good as a lemma)
+</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Robert 'Probie' Offner</p>
-<p class="date">Created: 2017-07-24 Mon 21:14</p>
+<p class="date">Created: 2017-07-25 Tue 13:33</p>
 <p class="creator"></p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
