@@ -2,12 +2,155 @@
 #+CREATOR: 
 #+SETUPFILE: /home/probie/Procrastination/org-html-themes/setup/theme-readtheorg-local.setup
 
+* Preface 
+
+** TODO Watch the lecture [66%]
+   - [X] Watch the lecture
+   - [X] Write notes
+   - [ ] Find which topics will require work
+ 
 * Lecture 1
 
-** TODO Watch the lecture [0%]
-   - [ ] Watch the lecture
-   - [ ] Write notes
-   - [ ] Find which topics will require work
+** Organisation
+
+There are 5 assignments, the schedule is on the website.
+
+No tutorials, only assignments. Modal and temporal logic is worth
+a third of the course *assignment are worth more*
+
+Pls no plagiarism. Copying off someone will destroy their mark
+as well
+
+** Example from business process modelling
+   
+The rules are in English in so the bank staff can read them
+
+Given a set of NL rules, how do we check consistency and sanity?
+
+How do we capture and reason about human reasoning?
+
+** Normal Raj talk
+
+Syntax + Semantics + Calculus
+
+He's nothing if not consistent
+
+Schema (statements around meta-variables)
+
+*** TODO add notes on this [0%]
+    
+We want notes for other people to be able to read, so we
+probably do need to write about this
+
+    - [ ] Find out what's confusing for people
+    - [ ] Write notes on the generic Raj talk
+
+** Propositional logic
+
+Atomic propositions (can be any sentence)
+
+We combine atomic propositions with connectives to
+build statements
+
+Two main problems - SAT ($\exists \ model . holds(model)$)  and 
+validity ($\forall model . holds(model)$)
+
+** First order logic
+
+Introduces functions and predicates
+
+Type theory we'll see at the end is a form of higher order logic
 
 
-$\Gamma \vdash \frac{3}{\tau}$
+** Modal and temporal logic
+
+Still a propositional logic
+
+Able to say things like $\phi$ is possibly true, $\phi$ is necessarily true,
+$\phi$ is true eventually and $\phi$ is always true.
+
+Another Raj-trio talk
+
+** Intuitionistic logic
+
+It's bae
+
+We delete 
+  - $\phi \lor \lnot \phi$ 
+  - $\phi \iff \lnot \lnot \phi$
+
+We still have
+  - $\lnot \phi \iff \lnot \lnot \lnot \phi$
+
+Raj-trio talk here
+
+But we're only look at the propositional flavour
+
+** Second order logic
+
+Not studied in the course
+
+** Different lecturer warning
+
+Different lecturers use different notation
+
+Negation: $\lnot$ $\sim$ $\text{!}$
+
+And: $\land$ $\text{&}$ $\sqcap$
+
+Or: $\lor$ $\mid$ $\sqcup$
+
+Implies: $\rightarrow$ $\Rightarrow$ $\supset$
+
+Iff: $\leftrightarrow$ $\Leftrightarrow$ $=$
+
+Turnstile: $\vdash$ (others omitted due to mathjax issues)
+
+We could have a unified notation, but the real world doesn't do that,
+so just git gud
+
+* Lecture 2
+
+** Propositional logic
+
+This is going to have a lot of repetition from previous courses
+
+Which of the follow are true ($A_1$ is "Socrates is a human", $A_2$ is "All humans are mortal")
+
+  - [X] $\{A_1, A_2\} \vdash \text{mortal}(\text{socrates})$
+  - [ ] $\{A_1, A_2\} \vdash \text{mortal}(\text{apollo})$
+  - [ ] $\{A_1, A_2\} \not \vdash \text{mortal}(\text{socrates})$
+  - [X] $\{A_1, A_2\} \not \vdash \text{mortal}(\text{apollo})$
+  - [ ] $\{A_1, A_2\} \vdash \lnot \text{mortal}(\text{socrates})$
+  - [ ] $\{A_1, A_2\} \vdash \lnot \text{mortal}(\text{apollo})$
+
+Monotonic reasoning is interesting, but not covered
+
+SAT solver competitions and theorem proving competitions are fun
+
+ATP for mathematical theorems turned out to be infeasible
+
+A basic group example from TPTP
+
+Proof by refutation is good
+
+He's still using beagle (maybe I should merge my congruence closure
+stuff back into it?)
+
+Current uses are for software verification and proofs of partial
+correctness
+
+Beagle is not a fast SAT solver (maybe try and fix this?)
+
+It can prove a more general thing. (The symmetry rule for n-queens)
+
+DPLL is good at providing models - Resolution is bad at getting models
+
+Propositional Logic is terminating, complete and fast
+
+First order logic is terminating, complete and moderately fast
+
+Stamps problem - given 3c and 5c stamps we can make any more greater
+than or equal to 8c
+
+Beagle doesn't directly handle this

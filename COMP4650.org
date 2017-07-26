@@ -96,8 +96,8 @@ Mon 2pm-3pm and Tue 12pm-1pm
 ** Labs
 
 There are 10 labs starting week 2
-*** TODO sign up [0%]
-  - [ ] Enroll in a lab tomorrow
+*** TODO sign up [100%]
+  - [X] Enroll in a lab tomorrow
 
 ** Course material and communications
 Everything on Wattle
@@ -114,7 +114,7 @@ Two weeks to finish assignment (except NLP)
 Written questions are submitted to Wattle
 
 * Lecture 2 (Information Retrieval)
-
+  
 ** Structure
 
 3 sections to this part of the course
