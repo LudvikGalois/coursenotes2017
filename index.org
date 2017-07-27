@@ -1,0 +1,18 @@
+#+AUTHOR: Robert 'Probie' Offner
+#+CREATOR: 
+#+SETUPFILE: /home/probie/Procrastination/org-html-themes/setup/theme-readtheorg-local.setup
+#+HTML_MATHJAX: path:"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"
+#+PROPERTY: header-args :cache yes
+#+TITLE: Course Notes
+
+* What is this?
+
+These are my course notes for the courses I'm taking. I've mainly put them
+up because it forces me to actually take them. 
+
+* The courses
+
+** 2017 Semester 2
+   
+  - [[http:arachnomorphism.com.au:9002/COMP4630.html][Overview of Logic and Computation (COMP4630)]]
+  - [[http:arachnomorphism.com.au:9002/COMP4650.html][Document Analysis (COMP4650)]]
