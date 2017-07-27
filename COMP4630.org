@@ -1,6 +1,7 @@
 #+AUTHOR: Robert 'Probie' Offner
 #+CREATOR: 
 #+SETUPFILE: /home/probie/Procrastination/org-html-themes/setup/theme-readtheorg-local.setup
+#+HTML_MATHJAX: path:"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"
 
 * Preface 
 
@@ -100,11 +101,11 @@ And: $\land$ $\text{&}$ $\sqcap$
 
 Or: $\lor$ $\mid$ $\sqcup$
 
-Implies: $\rightarrow$ $\Rightarrow$ $\supset$
+Implies: $\rightarrow$ $\Rightarrow$ $\supset$ $\sqsubset$
 
 Iff: $\leftrightarrow$ $\Leftrightarrow$ $=$
 
-Turnstile: $\vdash$ (others omitted due to mathjax issues)
+Turnstile: $\vdash$ $\vDash$ $\Vdash$
 
 We could have a unified notation, but the real world doesn't do that,
 so just git gud
