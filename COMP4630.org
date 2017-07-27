@@ -13,6 +13,9 @@
 * Lecture 1
 
 ** Organisation
+   
+(What follows is probably wrong, since it's taken from the recording
+which is not for this year's course)
 
 There are 5 assignments, the schedule is on the website.
 
@@ -120,8 +123,8 @@ Which of the follow are true ($A_1$ is "Socrates is a human", $A_2$ is "All huma
 
   - [X] $\{A_1, A_2\} \vdash \text{mortal}(\text{socrates})$
   - [ ] $\{A_1, A_2\} \vdash \text{mortal}(\text{apollo})$
-  - [ ] $\{A_1, A_2\} \not \vdash \text{mortal}(\text{socrates})$
-  - [X] $\{A_1, A_2\} \not \vdash \text{mortal}(\text{apollo})$
+  - [ ] $\{A_1, A_2\} \nvdash \text{mortal}(\text{socrates})$
+  - [X] $\{A_1, A_2\} \nvdash \text{mortal}(\text{apollo})$
   - [ ] $\{A_1, A_2\} \vdash \lnot \text{mortal}(\text{socrates})$
   - [ ] $\{A_1, A_2\} \vdash \lnot \text{mortal}(\text{apollo})$
 
