@@ -150,7 +150,7 @@ What we want to do: Retrieve information from it
 
 Classic Search Model
 
-*** TODO make this in dot
+*** DONE make this in dot
 1. User task (Listen to music using bluetooth headphone)
 2. Info need (Info about how to connect)
 3. Query (Work out what to search)
@@ -158,6 +158,34 @@ Classic Search Model
 5. Result (We're done if it's what we want)
 6. Query refinement (from 5 and to 3)
 Collection (into 4)
+
+#+BEGIN_SRC dot :file images/classic_search.png
+digraph {
+  bgcolor=black
+  node [fontcolor=green, color=green, shape=rectangle]
+  edge [color=green]
+  step1 [label="User task (Listen to music using bluetooth headphone)"]
+  step2 [label="Info need (Info about how to connect)"]
+  step3 [label="Query (Work out what to search)"]
+  step4 [label="Search engine (Search for it)"]
+  step5 [label="Result (We're done if we've found what we're looking for)"]
+  step6 [label="Query refinement"]
+  collection [label="Collection"]
+  step1 -> step2
+  step2 -> step3
+  step3 -> step4
+  step4 -> step5
+  step5 -> step6
+  step6 -> step3
+  collection -> step4
+  // Stick collection in the right spot
+  step4 -> collection [style="invis"]
+  step5 -> collection [style="invis"]
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:images/classic_search.png]]
 
 Every good IR system needs to achieve
   - Effectiveness (Google has more than 130 trillion pages)
