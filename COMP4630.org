@@ -2,6 +2,7 @@
 #+CREATOR: 
 #+SETUPFILE: /home/probie/Procrastination/org-html-themes/setup/theme-readtheorg-local.setup
 #+HTML_MATHJAX: path:"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"
+#+PROPERTY: header-args :cache yes
 
 * Preface 
 
