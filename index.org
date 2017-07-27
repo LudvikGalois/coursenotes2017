@@ -14,5 +14,5 @@ up because it forces me to actually take them.
 
 ** 2017 Semester 2
    
-  - [[http:arachnomorphism.com.au:9002/COMP4630.html][Overview of Logic and Computation (COMP4630)]]
-  - [[http:arachnomorphism.com.au:9002/COMP4650.html][Document Analysis (COMP4650)]]
+  - [[http:COMP4630.html][Overview of Logic and Computation (COMP4630)]] 
+  - [[http:COMP4650.html][Document Analysis (COMP4650)]]
